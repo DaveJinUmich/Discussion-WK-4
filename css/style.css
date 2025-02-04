@@ -52,3 +52,38 @@ body{
     margin-bottom: 10px;
     text-align: center;
  }
+
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(3, 250px);
+   grid-template-rows: repeat(2, auto);
+   gap: 20px;
+   border: 2px dashed black;
+   width: 90%;
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+}
+
+.gallery img {
+   width: 250px;
+   height: auto;
+   display: block;
+   margin: auto;
+}
+
+@media (max-width: 800px) {
+   .gallery {
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   }
+   .gallery img {
+       width: 100%;
+   }
+}
+
+.coffeeshop {
+   grid-column: 3 / 4;
+   grid-row: 2 / 3;
+   width: 250px;
+   height: auto;
+}
